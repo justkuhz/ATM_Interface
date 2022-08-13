@@ -1,12 +1,12 @@
 public class Account {
     private String userID;
-    private String pin;
+    private int pin;
     private String name;
     private double balance;
     private final Transaction_History transactionHistory;
 
     // Constructors
-public Account(String name, String userID, String pin) {
+public Account(String name, String userID, int pin) {
 
     this.name = name;
     this.userID = userID;
@@ -17,7 +17,7 @@ public Account(String name, String userID, String pin) {
     Transaction creation = new Transaction("Account Creation", name, 0);
     transactionHistory.addTransaction(creation);
 }
-public Account(String name, String userID, String pin, int balance) {
+public Account(String name, String userID, int pin, int balance) {
 
     this.name = name;
     this.userID = userID;
@@ -86,11 +86,11 @@ public void receiveMoney(double amount, String sentFrom) {
         this.userID = userID;
     }
 
-    public String getPin() {
+    public int getPin() {
         return pin;
     }
 
-    public void setPin(String pin) {
+    public void setPin(int pin) {
         this.pin = pin;
     }
 
