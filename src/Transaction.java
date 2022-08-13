@@ -6,17 +6,21 @@ public class Transaction {
     private double amount;
     private int identifier;
 
-    public Transaction(String type, String time, double amount) {
+    Date_and_Time dt = new Date_and_Time();
+
+    public Transaction(String type, double amount) {
         this.type = type;
-        this.time = time;
+        dt.setCurrentTime();
+        this.time = dt.getDatetime();
         this.amount = amount;
         this.name = "";
         this.identifier = -1;
     }
 
-    public Transaction(String type, String time, String name, double amount) {
+    public Transaction(String type, String name, double amount) {
         this.type = type;
-        this.time = time;
+        dt.setCurrentTime();
+        this.time = dt.getDatetime();
         this.amount = amount;
         this.name = name;
         this.identifier = -1;

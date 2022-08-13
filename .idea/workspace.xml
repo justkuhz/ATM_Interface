@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9de6e2-be68-48ea-962f-5a1d28947d66" name="Changes" comment="seeing loading bar XD">
+    <list default="true" id="3e9de6e2-be68-48ea-962f-5a1d28947d66" name="Changes" comment="added implementation for tracking transactions and pairing them with respective unique IDs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ATM_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ATM_Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transaction_History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaction_History.java" afterDir="false" />
@@ -56,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660267196073</updated>
       <workItem from="1660267200119" duration="6110000" />
-      <workItem from="1660365239449" duration="2204000" />
+      <workItem from="1660365239449" duration="3367000" />
     </task>
     <task id="LOCAL-00001" summary="outlining classes">
       <created>1660365196457</created>
@@ -65,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660365196457</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added implementation for tracking transactions and pairing them with respective unique IDs">
+      <created>1660368447505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660368447505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +93,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="outlining classes" />
     <MESSAGE value="seeing loading bar XD" />
-    <option name="LAST_COMMIT_MESSAGE" value="seeing loading bar XD" />
+    <MESSAGE value="added implementation for tracking transactions and pairing them with respective unique IDs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added implementation for tracking transactions and pairing them with respective unique IDs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Account.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

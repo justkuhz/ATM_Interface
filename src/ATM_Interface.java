@@ -7,7 +7,7 @@
  */
 import java.util.*;
 
-//TODO: Don't forget to javadocs your public methods :)
+// TODO: Don't forget to javadocs your public methods :)
 
 public class ATM_Interface {
     public static void main(String[] args) {

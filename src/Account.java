@@ -3,23 +3,28 @@ public class Account {
     private String pin;
     private String name;
     private double balance;
-    private Transaction_History history;
+    private Transaction_History transactionHistory;
 
     // Constructors
 public Account(String name, String userID, String pin) {
+
     this.name = name;
     this.userID = userID;
     this.pin = pin;
     this.setBalance(0);
-    this.history = new Transaction_History();
-    // TODO:Log Transaction_History Account Creation Date and Time
+    this.transactionHistory = new Transaction_History();
+
+    Transaction creation = new Transaction("Account Creation", name, 0);
+
+    transactionHistory.addTransaction(creation);
+
 }
 public Account(String name, String userID, String pin, int balance) {
     this.name = name;
     this.userID = userID;
     this.pin = pin;
     this.balance = balance;
-    this.history = new Transaction_History();
+    this.transactionHistory = new Transaction_History();
     // TODO:Log Transaction_History Account Creation Date and Time
 }
 

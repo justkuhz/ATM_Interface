@@ -11,13 +11,9 @@ public class Transaction_History {
     public Transaction_History() {
     }
 
-    public boolean addTransaction(Transaction transaction) {
+    public void addTransaction(Transaction transaction) {
         if (generateID(transaction)) {
             history.put(transaction.getIdentifier(), transaction);
-            return true;
-        }
-        else {
-            return false; // something went wrong in generating an ID and adding the transaction and its key ID into the hash map
         }
     }
 
