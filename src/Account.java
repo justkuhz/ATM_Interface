@@ -3,7 +3,7 @@ public class Account {
     private String pin;
     private String name;
     private double balance;
-    private Transaction_History transactionHistory;
+    private final Transaction_History transactionHistory;
 
     // Constructors
 public Account(String name, String userID, String pin) {
@@ -15,49 +15,66 @@ public Account(String name, String userID, String pin) {
     this.transactionHistory = new Transaction_History();
 
     Transaction creation = new Transaction("Account Creation", name, 0);
-
     transactionHistory.addTransaction(creation);
-
 }
 public Account(String name, String userID, String pin, int balance) {
+
     this.name = name;
     this.userID = userID;
     this.pin = pin;
     this.balance = balance;
     this.transactionHistory = new Transaction_History();
-    // TODO:Log Transaction_History Account Creation Date and Time
+
+    Transaction creation = new Transaction("Account Creation", name, balance);
+    transactionHistory.addTransaction(creation);
 }
 
-    public boolean depositMoney(double deposit) {
-    if (deposit >= 1) {
-        setBalance(this.balance + deposit);
+    public boolean depositMoney(double amount) {
+
+    if (amount >= 0.01) {
+
+        setBalance(this.balance + amount);
+
+        Transaction depositTransaction = new Transaction("Deposit", name, amount);
+        transactionHistory.addTransaction(depositTransaction);
+
         return true; //deposit amount is valid and successful
-        // TODO:Log Transaction_History Deposit amount, date and time
     }
     else return false; //if the deposit amount is invalid (negative)
 }
 
 public boolean withdrawMoney(double amount) {
+
     if (amount <= this.balance) {
         setBalance(this.balance - amount);
+
+        Transaction withdrawTransaction = new Transaction("Withdrawal", name, amount);
+        transactionHistory.addTransaction(withdrawTransaction);
+
         return true; //withdraw amount was valid and successful
-        // TODO:Log Transaction_History withdrawal amount, date and time
     }
     else return false; //withdraw amount was invalid
 }
 
-public boolean sendMoney(double amount) {
+public boolean sendMoney(double amount, String sentTo) {
+
     if (amount <= this.balance) {
         setBalance(this.balance - amount);
+
+        Transaction sendTransaction = new Transaction("Money Sent To: ", sentTo, amount);
+        transactionHistory.addTransaction(sendTransaction);
+
         return true; //successful money send
-        // TODO:Log Transaction_History transferred amount, date, time, and receiving userID and name
     }
     else return false; //unsuccessful money send
 }
 
-public void receiveMoney(double amount) {
+public void receiveMoney(double amount, String sentFrom) {
+
     setBalance(this.balance + amount);
-    // TODO:Log Transaction_History received amount, date, time, and from userID and name
+
+    Transaction receiveTransaction = new Transaction("Money Sent From: ", sentFrom, amount);
+    transactionHistory.addTransaction(receiveTransaction);
 }
 
 // Setters and Getters

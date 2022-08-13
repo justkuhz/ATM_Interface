@@ -15,8 +15,8 @@ public class ATM_Interface {
     }
 
     public boolean transferMoney(Account account1, Account account2, int amount) {
-        if (account1.sendMoney(amount)) {
-            account2.receiveMoney(amount);
+        if (account1.sendMoney(amount, account2.getName())) {
+            account2.receiveMoney(amount, account1.getName());
             return true;
         }
         else return false;
