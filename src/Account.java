@@ -5,6 +5,7 @@ public class Account {
     private double balance;
     private Transaction_History history;
 
+    // Constructors
 public Account(String name, String userID, String pin) {
     this.name = name;
     this.userID = userID;
@@ -13,7 +14,6 @@ public Account(String name, String userID, String pin) {
     this.history = new Transaction_History();
     // TODO:Log Transaction_History Account Creation Date and Time
 }
-
 public Account(String name, String userID, String pin, int balance) {
     this.name = name;
     this.userID = userID;
@@ -23,7 +23,7 @@ public Account(String name, String userID, String pin, int balance) {
     // TODO:Log Transaction_History Account Creation Date and Time
 }
 
-public boolean depositMoney(double deposit) {
+    public boolean depositMoney(double deposit) {
     if (deposit >= 1) {
         setBalance(this.balance + deposit);
         return true; //deposit amount is valid and successful
@@ -79,4 +79,13 @@ public void receiveMoney(double amount) {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

@@ -4,12 +4,14 @@ public class Transaction {
     private String time;
     private String name;
     private double amount;
+    private int identifier;
 
     public Transaction(String type, String time, double amount) {
         this.type = type;
         this.time = time;
         this.amount = amount;
-        name = "";
+        this.name = "";
+        this.identifier = -1;
     }
 
     public Transaction(String type, String time, String name, double amount) {
@@ -17,6 +19,7 @@ public class Transaction {
         this.time = time;
         this.amount = amount;
         this.name = name;
+        this.identifier = -1;
     }
 
     // Getters and Setters
@@ -51,4 +54,8 @@ public class Transaction {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+
+    public int getIdentifier() { return identifier; }
+
+    public void setIdentifier(int identifier) { this.identifier = identifier; }
 }
