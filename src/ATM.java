@@ -17,6 +17,7 @@ public class ATM {
     private JTextArea eventLog;
     private JButton newAccountButton;
     private JButton logInButton;
+    private JPanel atmPanel;
 
     public static HashMap<String, Integer> accountList = new HashMap<>();
 
@@ -39,8 +40,13 @@ public class ATM {
     }
 
     public static void main(String[] args) {
-
-
+        ATM atm = new ATM();
+        JFrame frame = new JFrame();
+        frame.setContentPane(atm.atmPanel);
+        frame.setTitle("ATM Java App");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
 }
